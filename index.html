@@ -11,89 +11,170 @@
 
 	<link rel="icon" href="img/favicon/favicon-16x16.png">
 	<link rel="stylesheet" href="libs/bs-reboot/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/styles.min.css">
 
-	<!-- Live Server does not work with Prefixfree -->
-	<!-- <script src="libs/prefixfree/prefixfree.min.js"></script> -->
+	<script src="libs/prefixfree/prefixfree.min.js"></script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<!-- Section: Header (START) -->
-		<header class="header">
-			<div class="header-container">
-				<div class="header-top">
-					<div class="site-logo">mntn</div>
+	<!-- Header (START) -->
+	<header class="header">
+		<div class="header-container">
+			<div class="header-top">
+				<div class="site-logo">mntn</div>
 
-					<!-- desktop-nav -->
-					<nav class="site-nav site-nav--desktop">
-						<a href="#">Equipment</a>
-						<a href="#">About us</a>
-						<a href="#">Blog</a>
-					</nav>
+				<!-- desktop-nav -->
+				<nav class="site-nav site-nav--desktop">
+					<a href="#">Equipment</a>
+					<a href="#">About us</a>
+					<a href="#">Blog</a>
+				</nav>
 
-					<!-- mobile-nav -->
-					<nav class="site-nav site-nav--mobile" id="site-nav--mobile">
-						<div class="mobile-nav-inner">
-							<div class="site-logo">mntn</div>
+				<!-- mobile-nav -->
+				<nav class="site-nav site-nav--mobile" id="site-nav--mobile">
+					<div class="mobile-nav-inner">
+						<div class="site-logo">mntn</div>
 
-							<a href="#"><i class="icon-arrow arrow-link"></i>Equipment</a>
-							<a href="#"><i class="icon-arrow arrow-link"></i>About us</a>
-							<a href="#"><i class="icon-arrow arrow-link"></i>Blog</a>
+						<a href="#"><i class="icon-arrow arrow-link"></i>Equipment</a>
+						<a href="#"><i class="icon-arrow arrow-link"></i>About us</a>
+						<a href="#"><i class="icon-arrow arrow-link"></i>Blog</a>
 
-							<div class="social-links--mobile">
-								<a href="#" class="icon-instagram" href="#"></a>
-								<a href="#" class="icon-twitter" href="#"></a>
-							</div>
+						<div class="social-links--mobile">
+							<a class="icon-instagram" href="#"></a>
+							<a class="icon-twitter" href="#"></a>
 						</div>
-					</nav>
-
-					<button class="burger" id="burger" type="button">
-						<span class="burger-item">Menu</span>
-					</button>
-
-					<div class="user-account">
-						<a href="#"><i class="icon-account"></i>Account</a>
 					</div>
+				</nav>
+
+				<button class="burger" id="burger" type="button">
+					<span class="burger-item">Menu</span>
+				</button>
+
+				<div class="user-account">
+					<a href="#"><i class="icon-account"></i>Account</a>
+				</div>
+			</div>
+
+			<div class="header-body">
+				<div class="social-links">
+					<a class="icon-instagram" href="#"></a>
+					<a class="icon-twitter" href="#"></a>
 				</div>
 
-				<div class="header-body">
-					<div class="social-links">
-						<a href="#" class="icon-instagram" href="#"></a>
-						<a href="#" class="icon-twitter" href="#"></a>
-					</div>
+				<div class="site-slogan">
+					<div class="suptitle">a hiking guide</div>
+					<h1 class="main-title title">be prepared for the<br> mountains and beyond!</h1>
+					<a class="arrow-link arrow-link--white" href="#intro">scroll down<i class="icon-arrow"></i></a>
+				</div>
 
-					<div class="site-slogan">
-						<div class="suptitle">a hiking guide</div>
-						<h1 class="main-title title">be prepared for the<br> mountains and beyond!</h1>
-						<a class="arrow-link arrow-link--white" href="#">scroll down<i class="icon-arrow"></i></a>
-					</div>
+				<nav class="page-nav">
+					<a href="#">Start</a>
+					<a href="#intro-item-01">01</a>
+					<a href="#intro-item-02">02</a>
+					<a href="#intro-item-03">03</a>
+				</nav>
+			</div>
+		</div> <!-- /.header-container -->
+	</header>
+	<!-- Header (END) -->
 
-					<nav class="page-nav">
-						<a href="#">Start</a>
-						<a href="#">01</a>
-						<a href="#">02</a>
-						<a href="#">03</a>
+	<!-- Section: Intro (START) -->
+	<section class="intro" id="intro">
+		<div class="container">
+			<div class="intro-item" id="intro-item-01">
+				<div class="intro-text">
+					<div class="suptitle"><span class="suptitle-number">01</span>get started</div>
+					<h2 class="title">What level of hiker are you?</h2>
+					<div class="intro-description">Determining what level of hiker you are can be an important tool when
+						planning future hikes. This hiking level guide will help you plan hikes according to different hike
+						ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice,
+						moderate, advanced moderate, expert, or expert backpacker?
+					</div>
+					<a href="#" class="arrow-link">read more<i class="icon-arrow"></i></a>
+				</div>
+
+				<div class="intro-img">
+					<img class="img-fluid" src="img/intro/intro-01.jpg" alt="Get Started">
+				</div>
+			</div>
+
+			<div class="intro-item" id="intro-item-02">
+				<div class="intro-text">
+					<div class="suptitle"><span class="suptitle-number">02</span>hiking essentials</div>
+					<h2 class="title">Picking the right Hiking Gear!</h2>
+					<div class="intro-description">The nice thing about beginning hiking is that you don’t really need any
+						special gear, you can probably get away with things you already have.
+						Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes,
+						which will get heavy and chafe wif they get sweaty or wet.
+					</div>
+					<a href="#" class="arrow-link">read more<i class="icon-arrow"></i></a>
+				</div>
+
+				<div class="intro-img">
+					<img class="img-fluid" src="img/intro/intro-02.jpg" alt="Hiking Essentials">
+				</div>
+			</div>
+
+			<div class="intro-item" id="intro-item-03">
+				<div class="intro-text">
+					<div class="suptitle"><span class="suptitle-number">03</span>where you go is the key</div>
+					<h2 class="title">Understand Your Map & Timing</h2>
+					<div class="intro-description">To start, print out the hiking guide and map. If it’s raining, throw them in
+						a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know
+						what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make
+						a right turn at the junction...
+					</div>
+					<a href="#" class="arrow-link">read more<i class="icon-arrow"></i></a>
+				</div>
+
+				<div class="intro-img">
+					<img class="img-fluid" src="img/intro/intro-03.jpg" alt="Where you go is the key">
+				</div>
+			</div>
+		</div> <!-- /.container -->
+	</section>
+	<!-- Section: Intro (END) -->
+
+	<!-- Footer (START) -->
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer-body">
+				<div class="footer-info">
+					<div class="footer-logo site-logo">mntn</div>
+					<div class="footer-text">Get out there & discover your next slope,<br>mountain & destination!</div>
+
+					<div class="footer-copy">Copyright 2021 MNTN, Inc. Terms & Privacy</div>
+				</div>
+
+				<div class="footer-lists">
+					<nav class="footer-nav">
+						<div class="footer-nav-label">More on The Blog</div>
+						<ul class="footer-list">
+							<li class="footer-list-item"><a href="#" class="footer-link">About MNTN</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-link">Contributors & Writers</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-link">Write For Us</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-link">Contact Us</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-link">Privacy Policy</a></li>
+						</ul>
+					</nav>
+
+					<nav class="footer-nav">
+						<div class="footer-nav-label">More on MNTN</div>
+						<ul class="footer-list">
+							<li class="footer-list-item"><a href="#" class="footer-link">The Team</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-link">Jobs</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-link">Press</a></li>
+						</ul>
 					</nav>
 				</div>
 			</div>
-		</header>
-		<!-- Section: Header (END) -->
-
-		<!-- Section: Introduction (START) -->
-		<section class="introduction">
-		</section>
-		<!-- Section: Introduction (END) -->
-	</div><!-- /.wrapper -->
-
-	<!-- Section: Footer (START) -->
-	<footer class="footer">
+		</div> <!-- /.footer-container -->
 	</footer>
-	<!-- Section: Footer (END) -->
+	<!-- Footer (END) -->
 
 	<!-- Local JS -->
 	<script src="libs/jquery/jquery.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/common.min.js"></script>
 </body>
 
 </html>
