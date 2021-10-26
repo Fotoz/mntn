@@ -282,7 +282,7 @@ Header
 @media (max-width: 767px) {
 	.header-top {
 		position: fixed;
-		top: 0;
+		top: -2px;
 		left: 0;
 		z-index: 100;
 		width: 100%;
