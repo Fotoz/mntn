@@ -18,42 +18,38 @@
 
 <body>
 	<!-- Header (START) -->
-	<header class="header">
+	<header class="header" id="header">
 		<div class="header-container">
 			<div class="header-top">
-				<div class="site-logo">mntn</div>
+				<div class="header-inner">
+					<a href="#header" class="site-logo">mntn</a>
 
-				<!-- desktop-nav -->
-				<nav class="site-nav site-nav--desktop">
-					<a href="#">Equipment</a>
-					<a href="#">About us</a>
-					<a href="#">Blog</a>
-				</nav>
+					<nav class="nav" id="nav">
+						<a href="#header" class="site-logo site-logo--mobile">mntn</a>
 
-				<!-- mobile-nav -->
-				<nav class="site-nav site-nav--mobile" id="site-nav--mobile">
-					<div class="mobile-nav-inner">
-						<div class="site-logo">mntn</div>
-
-						<a href="#"><i class="icon-arrow arrow-link"></i>Equipment</a>
-						<a href="#"><i class="icon-arrow arrow-link"></i>About us</a>
-						<a href="#"><i class="icon-arrow arrow-link"></i>Blog</a>
+						<ul class="nav-list">
+							<li><a href="#intro-item-01">Get Started</a></li>
+							<li><a href="#intro-item-02">Hiking Gear</a></li>
+							<li><a href="#intro-item-03">Guide</a></li>
+						</ul>
 
 						<div class="social-links--mobile">
 							<a class="icon-instagram" href="#"></a>
 							<a class="icon-twitter" href="#"></a>
 						</div>
+					</nav>
+
+					<button class="burger" id="burger" type="button">
+						<span class="burger-box">
+							<span class="burger-item">Menu</span>
+						</span>
+					</button>
+
+					<div class="user-account">
+						<a href="#"><i class="icon-account"></i>Account</a>
 					</div>
-				</nav>
-
-				<button class="burger" id="burger" type="button">
-					<span class="burger-item">Menu</span>
-				</button>
-
-				<div class="user-account">
-					<a href="#"><i class="icon-account"></i>Account</a>
 				</div>
-			</div>
+			</div> <!-- /.header-top -->
 
 			<div class="header-body">
 				<div class="social-links">
@@ -140,7 +136,7 @@
 		<div class="footer-container">
 			<div class="footer-body">
 				<div class="footer-info">
-					<div class="footer-logo site-logo">mntn</div>
+					<div class="footer-logo"><a href="#header" class="site-logo">mntn</a></div>
 					<div class="footer-text">Get out there & discover your next slope,<br>mountain & destination!</div>
 
 					<div class="footer-copy">Copyright 2021 MNTN, Inc. Terms & Privacy</div>

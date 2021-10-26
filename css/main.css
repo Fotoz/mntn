@@ -45,12 +45,12 @@ Fonts
 [class^="icon-"], [class*=" icon-"] {
 	/*** use !important to prevent issues with browser extensions that change fonts ***/
 	font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 
 	/*** Better Font Rendering ***/
 	-webkit-font-smoothing: antialiased;
@@ -166,6 +166,10 @@ select {
 .site-logo {
 	font: 32px 'PlayfairDisplayBold', serif;
 	text-transform: uppercase;
+	color: #fff;
+}
+.site-logo:hover {
+	color: #fff
 }
 .suptitle {
 	position: relative;
@@ -236,20 +240,28 @@ Header
 	padding: 0 15px;
 }
 
-.site-nav a {
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav a {
 	color: inherit;
 }
-@media (min-width: 992px) {
-	.header-top {
+@media (min-width: 768px) {
+	.site-logo--mobile,
+	.social-links--mobile,
+	.burger {
+		display: none;
+	}
+	.nav-list {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
 	}
-	.site-nav--desktop a {
+	.nav-list li {
 		position: relative;
-		margin: 0 20px;
+		margin: 0 23px;
 	}
-	.site-nav--desktop a::before {
+	.nav-list li::after {
 		content: '';
 		position: absolute;
 		bottom: -5px;
@@ -262,81 +274,120 @@ Header
 		background-color: rgba(var(--accent-rgba), 0);
 		transition: all .2s linear;
 	}
-	.site-nav--desktop a:hover::before {
+	.nav-list li:hover::after {
 		transform: scaleX(1);
 		background-color: rgba(var(--accent-rgba), 1);
 	}
-	.site-nav--desktop {
-		display: block;
-	}
-	.site-nav--mobile,
-	.burger {
-		display: none;
-	}
 }
-@media (max-width: 991px) {
-	.header-top > .site-logo,
-	.site-nav--desktop {
-		display: none;
-	}
-	.site-nav--mobile {
-		display: none;
-		position: absolute;
-		padding: calc(60px + (95 - 60) * ((100vw - 320px) / (991 - 320))) 15px 15px;
+@media (max-width: 767px) {
+	.header-top {
+		position: fixed;
 		top: 0;
 		left: 0;
 		z-index: 100;
-
 		width: 100%;
-		height: 100vh;
-
-		background-color: var(--body-bg);
 	}
-	.mobile-nav-inner {
+	.header-top::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		width: 100%;
 		height: 100%;
+
+		background-color: #3d4c52;
+	}
+	.header-inner {
+		height: 50px;
+		padding: 0 15px;
+	}
+	.header-body {
+		margin-top: 50px;
+	}
+	.site-logo {
+		display: none;
+	}
+	.nav {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		padding: 80px 15px 25px;
 
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-	}
-	.mobile-nav-inner > a {
-		display: block;
-		margin: 20px 0;
 
-		font-size: 18px;
+		text-align: center;
+		background-color: var(--body-bg);
+		transition: all .4s linear;
 	}
-	.site-nav--mobile .icon-arrow::before {
+	.nav.is-active {
+		top: 0;
+		opacity: 1;
+	}
+	.site-logo--mobile {
+		display: block;
+		margin-bottom: 30px;
+		font-size: 40px;
+	}
+	.nav-list li {
+		margin: 18px 0;
+	}
+	.nav-list li:last-child {
+		margin-bottom: 40px;
+	}
+	.nav-list a {
+		padding: 0 20px;
+		font-size: 30px;
+	}
+	.nav-list li::before,
+	.nav-list li::after {
+		content: '\e901';
 		display: inline-block;
-		margin-right: 10px;
-		transform: translateY(2px);
+		transform: translateY(-2px);
+		font-family: 'icomoon';
+		color: var(--accent);
+	}
+	.nav-list li::after {
+		transform: rotate(180deg);
 	}
 
 	.social-links--mobile {
 		font-size: 0; /*** Убираем дополнительный отступ inline элементов ***/
 	}
 	.social-links--mobile a {
-		font-size: 30px;
+		font-size: 40px;
 	}
 	.social-links--mobile a:not(:last-child) {
-		margin-right: 15px;
+		margin-right: 30px;
 	}
 	.burger {
-		display: block;
-		position: absolute;
-		top: calc(26px + (74 - 26) * ((100vw - 320px) / (1699 - 320)));
-		left: 15px;
-		z-index: 100;
-
-		width: 40px;
+		display: inline-block;
 		padding: 0;
 
 		font-size: 0;
 		color: transparent;
 		background-color: transparent;
 	}
+	.burger-box {
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+		width: 40px;
+		height: 28px;
+	}
+	.burger-item {
+		top: 50%;
+		margin-top: -2px;
+	}
 	.burger-item,
 	.burger-item::before,
 	.burger-item::after {
 		display: block;
+		position: absolute;
 		width: 100%;
 		height: 4px;
 
@@ -347,8 +398,6 @@ Header
 	.burger-item::before,
 	.burger-item::after {
 		content: '';
-		position: absolute;
-		left: 0;
 	}
 	.burger-item::before {
 		top: -10px;
@@ -369,11 +418,13 @@ Header
 	.burger.is-active .burger-item::after {
 		transform: translateY(-10px) rotate(-45deg);
 	}
-	.user-account {
+	/* .user-account {
 		text-align: right;
-	}
+	} */
 }
 .user-account a {
+	position: relative;
+	z-index: 10;
 	font-size: 18px;
 	color: inherit;
 	transition: color .15s linear;
